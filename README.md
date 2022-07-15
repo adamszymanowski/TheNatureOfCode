@@ -3,6 +3,19 @@ Me going through [book](https://natureofcode.com/book/)/[videos](https://www.you
 
 I might do C/C++ version using raylib too...
 
-
 ## Additional Resources
 - [raylib cheatsheet](https://www.raylib.com/cheatsheet/cheatsheet.html)
+
+## Project setup
+### Python requirements
+Are contained in `requirements.txt`
+
+tip on how to output requirements: `pip freeze > requirements.txt`
+
+### venv setup example
+```
+python -m venv .\venv\the_nature_of_code
+.\venv\the_nature_of_code\Scripts\activate
+pip install wheel
+pip install raylib
+```
