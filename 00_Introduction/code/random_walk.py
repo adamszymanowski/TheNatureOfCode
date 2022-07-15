@@ -10,15 +10,17 @@ class RandomWalk():
 
     def draw(self):
         for location in self.previous_locations:
-            pyray.draw_rectangle(location.x, location.y, scale, scale, pyray.BLACK)
+            x,y  = location
+            pyray.draw_rectangle(x, y, scale, scale, pyray.BLACK)
         
         pyray.draw_rectangle(self.current_location.x, self.current_location.y, 
                                 scale, scale, pyray.MAGENTA)
 
     def walk(self):
         location = Point(self.current_location.x, self.current_location.y)
-        if location not in self.previous_locations:
-            self.previous_locations.append(location)
+        x_and_y = (location.x, location.y)
+        if x_and_y not in self.previous_locations:
+            self.previous_locations.append(x_and_y)
 
         r = random.randrange(4)
         # 0 Up 1 Down 2 Left 3 Right
